@@ -500,7 +500,7 @@ class GetFinanceData:
         def unify_dtypes(df, dtypes_dict):
             for col, dtype in dtypes_dict.items():
                 if col in df.columns:
-                    if dtype == 'datetime64[ns]':  # 日付型の処理
+                    if dtype == 'datetime64[ns]': 
                         df[col] = pd.to_datetime(df[col])
                     else:
                         df[col] = df[col].astype(dtype)
